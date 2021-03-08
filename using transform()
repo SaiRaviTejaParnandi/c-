@@ -1,0 +1,16 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string name;
+	cout<<"enter the name"<<endl;
+	getline(cin,name);
+	cout<<"the name you enterd is "<<name<<endl;
+	transform(name.begin(),name.end(),name.begin(),::toupper);
+	cout<<"after converting string  into upper case letters\n"<<name<<endl;
+	transform(name.begin(),name.end(),name.begin(),::tolower);
+	cout<<"after converting string  into lower case letters\n"<<name<<endl;
+	return 0 ;
+}
