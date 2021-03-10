@@ -17,3 +17,48 @@ int main()
 	cout<<"after converting string  into lower case letters\n"<<name<<endl;
 	return 0 ;
 }
+
+
+// using switch case 
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{   int option,i;
+	string s;
+	cout<<"enter a string"<<endl;
+	getline(cin,s);
+	cout<<"enter your option\n";
+	cout<<"enter 1 for converting to lower case"<<endl;
+	cout<<"enter 2 for converting to upper case"<<endl;
+	cin>>option;
+	switch(option)
+	{
+		case 1:
+			while(i<s.size())
+			{
+				if(s[i]>='A' && s[i]<='Z')
+				{
+					s[i]=s[i]+32;
+					
+				}
+				i++;
+			}
+			cout<<s<<endl;
+			break;
+		case 2:
+			while(i<s.size())
+			{
+				if(s[i]>='a' && s[i]<='z')
+				{
+					s[i]=s[i]-32;
+					
+				}
+				i++;
+			}
+			cout<<s<<endl;
+			break;
+	}
+	cout<<"thanks namaste\n";
+	return 0;
+}
