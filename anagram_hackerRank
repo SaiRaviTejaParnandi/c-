@@ -1,0 +1,34 @@
+// Complete the makingAnagrams function below.
+int makingAnagrams(string s1, string s2) {
+    int freq1[26]={0};
+    int count=0;
+    
+    int freq2[26]={0};
+    int len1 = s1.size();
+    int len2 = s2.size();
+    for (int i=0;i<len1;i++)
+    {
+        freq1[s1[i]-'a']++;
+    }    
+    for (int i=0;i<len2;i++)
+    {
+        freq2[s2[i]-'a']++;
+    }
+    for  ( int i=0;i<26;i++)
+    {
+        
+        if ((freq1[i]!=freq2[i]))
+        {
+            if ((freq1[i]>freq2[i]))
+            {
+                count=count+(freq1[i]-freq2[i]);
+            }
+            else
+            {
+                count=count+(freq2[i]-freq1[i]);
+            }
+        }
+         
+    } 
+    
+ return count;
