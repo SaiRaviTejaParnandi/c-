@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        int len = nums.size();
+     
+        if(len == 0)
+            return nums;
+        
+      vector<int> result(len);
+      int low = 0, high = len-1, j = len-1;
+        while(low <= high)
+        {
+            if(abs(nums[low]) > abs(nums[high]))
+            {
+                result[j--] = nums[low]*nums[low];
+                low++;
+            }
+            else
+            {
+                result[j--] = nums[high]*nums[high];
+                high--;
+            }    
+           
+        }
