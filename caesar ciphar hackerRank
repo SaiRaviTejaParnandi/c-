@@ -1,0 +1,32 @@
+    int len= s.size();
+    k=k%26;
+    for (int i=0;i<len;i++)
+     {  
+        if ( s[i] >= 'a' && s[i]<= 'z' )
+        {
+            if (s[i]+k > 'z')
+            {
+               s[i]=((-'a'+k+s[i])%26)+'a';
+            }
+            else {
+            s[i]= s[i]+k;
+            }
+        }
+         else if ( s[i] >= 'A' && s[i]<= 'Z' )
+         {
+            if (s[i]+k > 'Z')
+            {
+                s[i]=((-'A'+k+s[i])%26)+'A';
+            }
+            else {
+            s[i]= s[i]+k;
+            }
+            
+         } 
+          else
+         {
+            s[i]=s[i];
+         }
+         
+     }
+    return s;
